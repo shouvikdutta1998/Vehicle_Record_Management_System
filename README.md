@@ -11,7 +11,7 @@ Index Page - Search button is vulnerable to Blind SQL Injection
 
 The Vehicle Record Management system application contains a vulnerability in the `searchinputdata` parameter on the index page. This parameter is vulnerable to a Blind SQL Injection attack due to improper sanitization of user input. An attacker can manipulate the `searchinputdata` input to execute crafted SQL queries, allowing them to dump the entire database, as the application's responses vary based on the injected queries. This vulnerability can be exploited by sending malicious input through the search functionality and observing subtle changes in the application's behavior or response times.
 
-Vulnerable Endpoint - /index.php
+Vulnerable Endpoint - /index.php ; 
 Vulnerable Parameter - `searchinputdata`
 
 # PoCs
